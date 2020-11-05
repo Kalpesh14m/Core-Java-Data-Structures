@@ -5,14 +5,10 @@ import java.util.Stack;
 import com.bunny.utils.InputUtility;
 
 class StackOperation1 {
-	static int SIZE;
+	private final int SIZE;
 
 	public StackOperation1(int size) {
-		SIZE = size;
-	}
-
-	public StackOperation1() {
-
+		this.SIZE = size;
 	}
 
 	public void push(Stack<Integer> stack) {
@@ -48,7 +44,7 @@ class StackOperation1 {
 public class StackUsingCollection {
 
 	public static void main(String[] args) {
-		Stack<Integer> stack = new Stack<Integer>();
+		Stack<Integer> stack = new Stack<>();
 
 		System.out.println("Enter Size of STACK: ");
 		StackOperation1 stk = new StackOperation1(InputUtility.intVal());

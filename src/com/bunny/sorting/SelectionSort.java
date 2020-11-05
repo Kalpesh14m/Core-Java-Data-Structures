@@ -1,47 +1,25 @@
 package com.bunny.sorting;
 
+import com.bunny.algo.SelectionSorting;
 import com.bunny.utils.InputUtility;
 import com.bunny.utils.Utility;
 
 public class SelectionSort {
 	static int[] arr;
-	static int pos, i, temp, small, j;
 
 	public static void main(String[] args) {
 		System.out.println("Enter limit of array");
-		int limit = InputUtility.intVal();
-
-		arr = Utility.getArrayElements(limit);
+		arr = Utility.getArrayElements( InputUtility.intVal());
 
 		System.out.println("Before Sort: ");
-		arr = Utility.display(arr);
+		Utility.display(arr);
 
 		System.out.println("After Sort: ");
-		arr = sort(arr);
+		SelectionSorting.sort(arr);
 		Utility.display(arr);
 	}
 
-	public static int[] sort(int[] arr) {
-		for (i = 0; i < arr.length; i++) {
-			pos = smallest(arr, i);
-			temp = arr[i];
-			arr[i] = arr[pos];
-			arr[pos] = temp;
-		}
-		return arr;
-	}
 
-	public static int smallest(int arr[], int i) {
-		small = arr[i];
-		pos = i;
-		for (j = i + 1; j < arr.length; j++) {
-			if (arr[j] < small) {
-				small = arr[j];
-				pos = j;
-			}
-		}
-		return pos;
-	}
 }
 
 

@@ -1,7 +1,6 @@
 package com.bunny.stack;
 
-import java.util.Arrays;
-
+import com.bunny.algo.StackOperation;
 import com.bunny.utils.InputUtility;
 
 public class StackUsingArray {
@@ -17,7 +16,6 @@ public class StackUsingArray {
 
 			switch (choice) {
 			case 1:
-
 				if (st.push()) {
 					System.out.println("Item Added");
 				} else {
@@ -46,60 +44,4 @@ public class StackUsingArray {
 			}
 		} while (choice != 4);
 	}
-
-}
-
-class StackOperation {
-	int top;
-	int SIZE;
-	Integer[] stk;
-
-	public StackOperation(int size) {
-		top = -1;
-		SIZE = size;
-		stk = new Integer[SIZE];
-	}
-
-	public StackOperation() {
-
-	}
-
-	public boolean isEmpty() {
-		return (top <= -1);
-	}
-
-	public boolean isFull() {
-		return (top >= SIZE - 1);
-	}
-
-	public boolean push() {
-		if (isFull()) {
-			return false;
-		}
-		top++;
-		stk[top] = getItem();
-		return true;
-	}
-
-	private int getItem() {
-		System.out.print("Enter Value: ");
-		return InputUtility.intVal();
-	}
-
-	public boolean pop() {
-		if (isEmpty()) {
-			return false;
-		}
-		stk[top] = 0;
-		top--;
-		return true;
-	}
-
-	public boolean show() {
-		if (isEmpty())
-			return false;
-		System.out.println(Arrays.asList(stk));
-		return true;
-	}
-
 }

@@ -1,11 +1,11 @@
-package com.bunny.singlelinklist;
+package com.bunny.doublelinklist;
 
-import com.bunny.algo.SingleLinkListOperations;
+import com.bunny.algo.DoubleLinkListOperations;
 import com.bunny.utils.InputUtility;
 
-public class SingleLinkListDemo {
+public class DoubleLinkListDemo {
 
-	private static SingleLinkListOperations list = new SingleLinkListOperations();
+	private static DoubleLinkListOperations list = new DoubleLinkListOperations();
 
 	public static void main(String[] args) {
 		int data, pos;

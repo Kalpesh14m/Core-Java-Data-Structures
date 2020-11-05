@@ -1,6 +1,9 @@
 package com.bunny.utils;
 
 public class Utility {
+	private Utility() {
+	}
+
 	private static int[] arr;
 
 	public static int[] display(int[] arr) {

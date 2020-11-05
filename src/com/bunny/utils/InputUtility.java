@@ -3,7 +3,7 @@ package com.bunny.utils;
 import java.util.Scanner;
 
 public class InputUtility {
-	private final static Scanner SC = new Scanner(System.in);
+	private static final Scanner SC = new Scanner(System.in);
 
 	private InputUtility() {
 	}

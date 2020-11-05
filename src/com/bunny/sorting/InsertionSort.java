@@ -1,5 +1,6 @@
 package com.bunny.sorting;
 
+import com.bunny.algo.InsertionSorting;
 import com.bunny.utils.InputUtility;
 import com.bunny.utils.Utility;
 
@@ -8,30 +9,17 @@ public class InsertionSort {
 
 	public static void main(String[] args) {
 		System.out.println("Enter limit of array");
-		int limit = InputUtility.intVal();
-
-		arr = Utility.getArrayElements(limit);
+		arr = Utility.getArrayElements(InputUtility.intVal());
 
 		System.out.println("Before Sort: ");
-		arr = Utility.display(arr);
+		Utility.display(arr);
 
 		System.out.println("After Sort: ");
-		arr = sort(arr);
+		InsertionSorting.sort(arr);
 		Utility.display(arr);
 	}
 
-	public static int[] sort(int[] arr) {
-		for (int i = 1; i < arr.length; i++) {
-			int temp = arr[i];
-			int j = i - 1;
-			while (j >= 0 && temp <= arr[j]) {
-				arr[j + 1] = arr[j];
-				j--;
-			}
-			arr[j + 1] = temp;
-		}
-		return arr;
-	}
+	
 }
 
 
